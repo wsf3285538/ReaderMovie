@@ -1,0 +1,20 @@
+<view class="container">
+  <image class='head-image' src="{{isplayingMusic?shuju.music.coverImg:shuju.headImgSrc}}"></image>
+  <image catchtap='onMusicTap' class='audio' src="{{isplayingMusic? '/images/Music-stop.png':'/images/Music-strat.png'}}"></image>
+  <view class='author-date'>
+    <image class='avatar' src="{{shuju.author_img}}"></image>
+    <text class='author'>{{shuju.author}}</text>
+    <text class='const-text'>发表于</text>
+    <text class='date'>{{shuju.dateTime}}</text>
+  </view>
+  <text class='title'>{{shuju.title}}</text>
+  <view class='tool'>
+    <view class='circle-img'>
+      <image wx:if="{{collected}}" catchtap="onColletionTap" src="/images/shoucang1.png"></image>
+      <image wx:else catchtap="onColletionTap" src="/images/shoucang22.png"></image>
+      <image catchtap='onShareTap' class='share-img' src="/images/fenxiang.png"></image>
+    </view>
+    <view class='horizon'></view>
+  </view>
+  <text class="detail">{{shuju.detail}}</text>
+</view>
